@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="programs.js"></script>
+    <script type="text/javascript" src="hyflash.js"></script>
+    <script type="text/javascript" src="binaural.js"></script>
+    <style>
+      table, td, th{ border: 1px solid black; }
+      .rot {-webkit-transform: rotate(-165deg);}
+      .ref {-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);}
+               background-position: 50% -150px;
+               background-repeat:no-repeat;}
+      .conditional_input { display: none;}
+      .conditional_input_activator:checked + .conditional_input { display: inline;}
+
+      #exportBox, #importBox {
+          position:fixed; width:500px; bottom:100px; left:100px; border: 3px solid #73AD21;
+          z-index: 101;
+          background: white;
+      }
+
+      .overlay{
+          background: black;
+          opacity: .5;
+          position:fixed;
+          top:0px;
+          bottom:0px;
+          left:0px;
+          right:0px;
+          z-index:100;
+      }
+
+      .notInverted{
+          filter: invert(0%);
+      }
+      .inverted{
+          filter:invert(100%);
+      }
+      .spiral_span{
+          border-style: solid;
+          border-width: 1px;
+          border-color: lightblue;
+          display: inline-block;
+      }
+      #extra1,#extra2{
+          position: relative;
+          width:100%;
+          text-align:center;
+          color:white;
+          z-index:10;
+          top:0px;
+          opacity:.3;
+      }
+      #extra1{
+      }
+      #extra2{
+      }
+      #progression{
+          position: relative; width:100%; text-align:center;
+          color:#55ffaa;
+          z-index:10;
+          top:0px;
+          opacity:.4;
+      }
+      #spiralContainer{
+          position:absolute;
+          width:100%;
+          height:100%;
+          z-index:5;
+          opacity: .5;
+      }
+      #spiral{
+          /*z-index:5;
+          opacity: .5;*/
+          /*top:0px;
+          bottom:0px;
+          left:0px;
+          right:0px;
+          width:100%;
+          height:100%;*/
+      }
+      .centralGradientClass{
+          position:absolute;
+          background-image: radial-gradient(black 30%, rgba(0,0,0,0) 60%);
+          z-index: 2;
+      }
+      .textwall{
+          color:#dd5555;
+          overflow:hidden;
+      }
+      .program { background-color: black;}
+    </style>
+  </head>
+  <body onload="loadPresets()" onresize="resizeSpiral()">
+    <input type="button" value="You Must Click" onclick="initializeFromForm()" style="display:none;" id="presetButton">
+    <span id="customButtons">
+      <h3>Hyflash hypno program v1.2</h3>
+      <input type="button" value="Dollhouse (female voice)" onclick='initializeFromForm_presets("dollhouse_female")'>
+      <input type="button" value="Dollhouse (male voice)" onclick='initializeFromForm_presets("dollhouse_male")'>
+    </span>
+    <form name="config" style="display:none;" onsubmit="return initializeFromForm()">
+      <h3>Hyflash hypno program v1.2</h3>
+      <input type="reset">
+      <input type="button" value="Export all options to a string" onclick="exportFormShow();">
+      <input type="button" value="Import options from a string" onclick="importFormShow()">
+      <input type="button" onclick="initializeFromForm();" value="Begin"><br>
+      This hypno-program is mostly about reinforcing hypnosis and making hypnosis in general harder to resist.  There are commands about being forced to obey &quot;against your will&quot; which are only going to work if you already want the experience of struggling to resist and failing.  For new users I would recommend just using the beginner preset, which is already selected, and hitting begin.  Then you can move on to the intermediate preset.  After that you may want to choose your own custom settings as you like, or you can use the puppet or slutty preset if either appeals to you.  The text dump option will give you a preview of the commands.  I&apos;m actively seeking feedback to improve the program and increase the selection of hypno scripts; let me know what you want, and it just might happen.  My email is rusticize (at) mail.com.
+      <fieldset>
+        <legend>Presets</legend>
+        <span class="presetOption"><input type="radio" name="presets" value="beginner_presets" checked>Beginner. For new subjects.  Includes an induction and trigger installation.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="notwitch_presets">Intermediate. For subjects with an installed trigger who don't so much like puppetry.  Doesn't make you twitch, just reinforces your inability to resist hypnosis.  Does make you whisper or smile.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="slut_presets">Slutty. Commands that reinforce being a slut. Warning: may alter your behavior in public.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="puppet_presets">Puppet.  For puppets with an installed trigger already (no induction).  Makes you twitch and controls your arms and legs.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="robot_presets">Robot.  For robots with an installed trigger already (no induction).  Makes you twitch and controls your arms and legs.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="todo_presets">todo<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="control_presets">Control.  You obey the Control Program.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="simplebot_presets">For those with simplebot. Includes randomized simplebot commands.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="productive_presets">Helps you get a positive attitude towards getting things done.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="schedule_presets" checked>Daily work and diet commands.<br></span>
+        <span class="presetOption"><input type="radio" name="presets" value="sexy_presets" checked>Sexy talk.<br></span>
+        <input type="radio" name="presets" value="custom_presets">Custom<br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Program display options</legend>
+        <input type="checkbox" name="textdump" value="yes"><span style="color:#B8860B;">Just show a text dump of all commands (to see what would happen without actually hypnotizing you)</span><br>
+        <span style="display:none;"><input type="checkbox" name="spreed" value="yes">Show one word at a time, like a speed reading program does (incompatible with voice)<br></span>
+        Speedup factor:<br>
+        <input type="number" name="speedup" value="1" step="0.2" min="0.2"><br>
+        <input type="checkbox" name="show_center_text" value="yes" checked>Show each command in the center as it is spoken
+      </fieldset>
+
+      <fieldset>
+        <legend>Program selection</legend>
+        Enter a list of which programs you would like to see. The choices are:<br>
+        <ul id="program_descriptions">
+		  <li>dollhouse = story time, turning you into a doll
+		  <li>persuade = uses persuasion tactics of reciprocation, consistency, social proof, liking, authority, and scarcity, to convince you to trust the hypnosis more (random order)
+		  <li>rollercoaster = forced to obey hypnosis, with commands appearing in a random order 
+        </ul>
+        <textarea rows="4" cols="50" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="programs"></textarea>
+        
+      </fieldset>
+
+      <fieldset>
+        <input type="checkbox" name="speak_bck" value="yes" checked>Hear a second voice in the background<br>
+        Volume: <input type="number" name="bckGain" value="0.5" min="0.01" max="1.0" step="0.01"><br>
+        <legend id="BckVoiceLegend">Background voice</legend>
+<input type="radio" name="voice_bck" value="irish_woman">Irish_woman</input><input type="radio" name="voice_bck" value="sleepy_man">Sleepy_man</input>        <input type="radio" name="voice_bck" value="none">None
+        <br>
+        Enter a list of which programs to hear in the background. The choices are the same as for the main program selection.<br>
+        <textarea rows="4" cols="50" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="programs_bck"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Program content options</legend>
+        <input type="radio" name="alt_programs" value="nicer" checked>&quot;Nice&quot;: require obedience only as long as deep down you want to be forced to obey.  Avoids some &quot;against your will&quot; phrasing, but still makes you obey even if you resist, as long as deep down that&apos;s what you want.<br>
+        <input type="radio" name="alt_programs" value="safe">&quot;Safe&quot;: require obedience as long as it's safe, even if you really don't want to.<br>
+        <input type="radio" name="alt_programs" value="unsafe">&quot;Unsafe&quot;: require obedience to all hypnotic commands, not just safe ones.<br>
+        <input type="checkbox" name="wake" value="yes">Wake up after each program<br>
+        <input type="checkbox" name="randomize" class="conditional_input_activator" value="yes" checked>Randomize the order of programs
+        <div class="conditional_input">
+          <br>Number of randomized programs: <input type="number" name="numProgs" value="10" min="1" max="1000">
+        </div><br>
+        <input type="checkbox" name="triggerprog" value="yes" checked>Begin with the trigger reinforcement program triggerprog (even when randomizing programs)<br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sprinkles selection</legend>
+        These commands will be sprinkled at random into other programs (except inductions).  The choices are:<br>
+        <ul id="sprinkles_descriptions">
+        </ul>
+        <textarea rows="4" cols="50" autocomplete="off" autocorrect="off" autocapitalization="off" spellcheck="false" name="sprinkles_list"></textarea><br>
+        Insert sprinkles with this probability: <input type="number" name="sprinkleProb" value="0.2" step="0.1" min="0" max="1"><br>
+      </fieldset>
+
+      <fieldset>
+        <legend id="VoiceLegend">Voice</legend>
+<input type="radio" name="voice" value="irish_woman">Irish_woman</input><input type="radio" name="voice" value="sleepy_man">Sleepy_man</input>        <input type="radio" name="voice" value="none">None
+        <br>
+        <input type="checkbox" name="chorus" value="yes">Hear a chorus of other voices behind the primary voice.
+      </fieldset>
+
+      <fieldset>
+        <legend>Spiral</legend>
+        A spiral will be selected at random from those checked.
+        <div id="spirals">
+              <span class="spiral_span"> <input type="checkbox" name="Spiral.gif" class="spiral_check" value="yes" checked> <img src="Spiral.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral7_horizontal.gif" class="spiral_check" value="yes" checked> <img src="spiral7_horizontal.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral8.gif" class="spiral_check" value="yes" checked> <img src="spiral8.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral10.gif" class="spiral_check" value="yes" checked> <img src="spiral10.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral11.gif" class="spiral_check" value="yes" checked> <img src="spiral11.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral12.gif" class="spiral_check" value="yes" checked> <img src="spiral12.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral17.gif" class="spiral_check" value="yes" checked> <img src="spiral17.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral18.gif" class="spiral_check" value="yes" checked> <img src="spiral18.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral19.gif" class="spiral_check" value="yes" checked> <img src="spiral19.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral20.gif" class="spiral_check" value="yes" checked> <img src="spiral20.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral21.gif" class="spiral_check" value="yes" checked> <img src="spiral21.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral9.gif" class="spiral_check" value="yes" checked> <img src="spiral9.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral13.gif" class="spiral_check" value="yes" checked> <img src="spiral13.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral14.gif" class="spiral_check" value="yes" checked> <img src="spiral14.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral15.gif" class="spiral_check" value="yes" checked> <img src="spiral15.png" width="100"> </span>
+              <span class="spiral_span"> <input type="checkbox" name="spiral16.gif" class="spiral_check" value="yes" checked> <img src="spiral16.png" width="100"> </span>
+        </div>
+        <input type="checkbox" name="only_spiral" value="yes">Only show the spiral, and nothing else.  Disables all text and voice.<br>
+        <input type="button" value="Deselect All" onclick="deselectSpirals()">
+      </fieldset>
+
+      <fieldset style="display:none;">
+        <legend>Optional: avoided commands</legend>
+        If there are any specific commands you don&apos;t like, use the &quot;just show a text dump of all commands&quot; program display option to get the exact text, then copy and paste one entire line of that into this box, and that command will not appear.  One command per line.<br>
+        <textarea rows="4" cols="100" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="badcommands" wrap="off"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Background suggestions</legend>
+        <input type="radio" name="backgroundSuggestions" value="none">None<br>
+        <input type="radio" name="backgroundSuggestions" value="obey">Obey (&quot;you&quot; pronouns)<br>
+        <input type="radio" name="backgroundSuggestions" value="obeyself">Obey (&quot;I&quot; pronouns)<br>
+        <input type="radio" name="backgroundSuggestions" value="obeypositive">Obey and positivity<br>
+        <input type="radio" name="backgroundSuggestions" value="encourage" checked>Pleasure and encouragement<br>
+        <input type="radio" name="backgroundSuggestions" value="encourageControl">Pleasure and encouragement (control program)<br>
+        Background flashing rate (milliseconds): <input type="number" name="flashrate" value="200" min="50" max="10000">
+      </fieldset>
+
+      <fieldset>
+        <legend>Binaurals</legend>
+        <input type="checkbox" name="binaurals" value="yes" class="conditional_input_activator" checked>Use binaurals
+        <div class="conditional_input">
+          <br>
+          Volume: <input type="number" name="binGain" value="0.15" min="0.01" max="1.0" step="0.01"><br>
+          Left ear frequencies (Hz): <input type="text" name="binLeft" value="200"><br>
+          Right ear frequencies (Hz): <input type="text" name="binRight" value="204 207">
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Trigger selection</legend>
+        <input type="radio" name="trigger" value="magic sleep now" checked>magic sleep now<br>
+        <input type="radio" name="trigger" value="Are you hypnotized?">Are you hypnotized?<br>
+        <input type="radio" name="trigger" value="Bambi sleep">Bambi sleep<br>
+        <input type="radio" name="trigger" class="conditional_input_activator" value="other">Other (specify, won&apos;t be spoken; if you want it spoken, ask me)
+        <div class="conditional_input">
+          <br>
+          <input type="text" name="triggerText" value="">
+        </div>
+      </fieldset>
+
+      <fieldset style="display:none;">
+        <legend>Extras (shown above and below)</legend>
+        <input type="radio" name="randExtras" value="randExtras" checked>Default (twitchy + persuade)
+      </fieldset>
+
+      <fieldset style="display:none;">
+        <legend>Setting Saver</legend>
+        <input type="text" id="setting_saver" name="setting_saver">
+      </fieldset>
+
+      <input type="reset">
+      <input type="button" value="Export all options to a string" onclick="exportFormShow();">
+      <input type="button" value="Import options from a string" onclick="importFormShow()">
+      <input type="submit" value="Begin">
+
+    </form>
+    <div id="exportBox" style="display:none;">Select all the text in the box (triple click), copy it, and paste it in a text file to save your options.<textarea rows="4" cols="50" id="exportArea"></textarea><input type="button" value="close" onclick="closeExportBox();"></div>
+    <div id="importBox" style="display:none;">Paste your option string into the box below.<textarea rows="4" cols="50" id="importArea"></textarea><input type="button" value="OK" onclick="closeImportBox();"></div>
+
+    <div class="overlay" id="overlay" style="display:none;"></div>
+
+    <div id="spiralContainer" style="display:none;">
+      <img id="spiral" onload="resizeSpiral()"/>
+    </div>
+    <div id="centralGradient" class="centralGradientClass" style="display:none;"> </div>
+    <div id="centralGradient2" class="centralGradientClass" style="display:none;"> </div>
+    <div id="1"> </div>
+    <div id="1.5" style="top:200px; "> </div>
+    <div id="2" style="top:400px;"> </div>
+    <div id="2.5" style="top:800px;"> </div>
+    <div id="3"></div>
+    <!--div style="width:70px;" class="rot">testt</div>
+        <div style="width:70px;" class="ref">reflect this boyo!</div -->
+                                                                     </body>
+</html>
