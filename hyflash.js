@@ -740,8 +740,6 @@ function initializeFromForm(){
 
 
     f.style="display:none;";
-    let b = document.getElementById("presetButton");
-    b.style="display:none;";
     if (programs.length > 0)
         preparePrograms(progression, programs, programNames, randomizePrograms, sprinkles);
     if (programs_bck.length > 0 && speak_bck){
