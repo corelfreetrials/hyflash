@@ -1170,7 +1170,7 @@ function updateExtra1(){
         extra = randExtras[Math.floor(Math.random() * randExtras.length)];
         extra = runCommand(extra, extras_refs);
     }
-    document.getElementById("1.5").innerHTML = '<div id="extra1">' + extra.replace(/magic sleep now/g,trigger) + "</div>"
+    document.getElementById("1.5").innerHTML = '<div id="extra1">' + getDisplaySnippet(extra.replace(/magic sleep now/g,trigger)) + "</div>"
 }
 
 function updateExtra2(){
@@ -1179,7 +1179,7 @@ function updateExtra2(){
         extra = randExtras[Math.floor(Math.random() * randExtras.length)];
         extra = runCommand(extra, extras_refs);
     }
-    document.getElementById("2.5").innerHTML = '<div id="extra2">' + extra.replace(/magic sleep now/g,trigger) + "</div>"
+    document.getElementById("2.5").innerHTML = '<div id="extra2">' + getDisplaySnippet(extra.replace(/magic sleep now/g,trigger)) + "</div>"
 }
 
 
@@ -1252,6 +1252,14 @@ function getVoiceFile(progSnippet, voice){
     return filename;
 }
 
+function getDisplaySnippet(progSnippet){
+    // eliminate #SAY and the text that follows #SAY
+    // eliminate #SHOW but keep the text that follows it
+    let displaySnippet = progSnippet.replace(/#SAY[^#]*/g,"");
+    displaySnippet = displaySnippet.replace(/#SHOW/g,"");
+    return displaySnippet;
+}
+
 function doProgression(){
     // now do progression
     if (progTime < new Date().getTime()){
@@ -1293,7 +1301,7 @@ function doProgression(){
         }
         if (progIndex < progression.length){
             if (showCenterText)
-                document.getElementById("2").innerHTML = '<div id="progression">' + progSnippet + "</div>"
+                document.getElementById("2").innerHTML = '<div id="progression">' + getDisplaySnippet(progSnippet) + "</div>"
             else
                 document.getElementById("2").innerHTML = '<div id="progression"></div>'
             let dur = progSnippet.length * 1000.0 / 3 / speedup;
