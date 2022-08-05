@@ -7,6 +7,8 @@ var test_female="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":f
 var test_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"test\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":true,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"magic sleep now\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 var candybimbo_female="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"candybimbo\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"irish_woman\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":true,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"magic sleep now\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 var candybimbo_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"candybimbo\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":true,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"magic sleep now\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
+var obedientbimbo_female="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"obedientbimbo\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"irish_woman\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":true,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"magic sleep now\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
+var obedientbimbo_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"obedientbimbo\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":true,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"magic sleep now\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 // HOWTO: I have added comments containing the text "HINT."  These comments are
 // meant to allow someone with minimal programming skill to edit the file so
 // that it shows the commands they want.  Do a text search in this file for "HINT"
@@ -223,6 +225,18 @@ function inArray(array, value) {
     return false;
 }
 
+function voiceIsFemale(voice){
+    if (voice.match("female"))
+        return true
+    if (voice.match("woman"))
+        return true
+    if (voice.match("male"))
+        return false
+    if (voice.match("man"))
+        return false
+    alert("Unknown is voice is female");
+}
+
 function preprocessProgram(p, refs){
     // run, and remove, any lines beginning with INITCODE::
     let p3 = [];
@@ -241,6 +255,8 @@ function preprocessProgram(p, refs){
         else
             p3.push(command);
     }
+    refs["voiceIsFemale"] = voiceIsFemale(voice);
+    refs["voiceIsMale"] = !voiceIsFemale(voice);
     return p3;
 }
 
