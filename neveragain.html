@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="programs.js?v=1.2.6"></script>
-    <script type="text/javascript" src="hyflash.js?v=1.2.6"></script>
-    <script type="text/javascript" src="binaural.js?v=1.2.6"></script>
+    <script type="text/javascript" src="programs.js?v=1.2.7"></script>
+    <script type="text/javascript" src="hyflash.js?v=1.2.7"></script>
+    <script type="text/javascript" src="binaural.js?v=1.2.7"></script>
     <style>
       table, td, th{ border: 1px solid black; }
       .rot {-webkit-transform: rotate(-165deg);}
@@ -94,11 +94,11 @@
   </head>
   <body onload="loadPresets()" onresize="resizeSpiral()">
     <span id="customButtons">
-      <h3>Hyflash hypno program v1.2.6</h3>
+      <h3>Hyflash hypno program v1.2.7</h3>
       <input type="button" value="Never Again" onclick='initializeFromForm_presets("neveragain_female")'>
     </span>
     <form name="config" style="display:none;" onsubmit="return initializeFromForm()">
-      <h3>Hyflash hypno program v1.2.6</h3>
+      <h3>Hyflash hypno program v1.2.7</h3>
       <input type="reset">
       <input type="button" value="Export all options to a string" onclick="exportFormShow();">
       <input type="button" value="Import options from a string" onclick="importFormShow()">
@@ -138,6 +138,7 @@
 		  <li>candybimbo = bimbo transformation script
 		  <li>dollhouse = story time, turning you into a doll
 		  <li>forgetresistance = makes you forget how to even try to resist
+		  <li>induction1 = sleepy induction, no trigger
 		  <li>mindpop_begin = begin mind popping mantra
 		  <li>mindpop_repeat = listen on repeat for mind popping mantra
 		  <li>neveragain = never again waste time. 9/14/2022
@@ -149,6 +150,7 @@
 		  <li>puppetstrings = forced to obey commands that include the phrase "puppet strings" even outside of hypnosis
 		  <li>rollercoaster = forced to obey hypnosis, with commands appearing in a random order 
 		  <li>test = test some commands
+		  <li>triggerprog = reinforces your trigger 
 		  <li>wakeupslow = wake up with a little warning beforehand
 		  <li>wakeupunstuck = unstick any body parts that got stuck, then wake you up
         </ul>
@@ -256,8 +258,7 @@
       <fieldset>
         <legend>Trigger selection</legend>
         <input type="radio" name="trigger" value="magic sleep now" checked>magic sleep now<br>
-        <input type="radio" name="trigger" value="Are you hypnotized?">Are you hypnotized?<br>
-        <input type="radio" name="trigger" value="Bambi sleep">Bambi sleep<br>
+        <input type="radio" name="trigger" value="coconut dreams">coconut dreams<br>
         <input type="radio" name="trigger" class="conditional_input_activator" value="other">Other (specify, won&apos;t be spoken; if you want it spoken, ask me)
         <div class="conditional_input">
           <br>
