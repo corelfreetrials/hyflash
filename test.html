@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="programs.js?v=1.2.5"></script>
-    <script type="text/javascript" src="hyflash.js?v=1.2.5"></script>
-    <script type="text/javascript" src="binaural.js?v=1.2.5"></script>
+    <script type="text/javascript" src="programs.js?v=1.2.6"></script>
+    <script type="text/javascript" src="hyflash.js?v=1.2.6"></script>
+    <script type="text/javascript" src="binaural.js?v=1.2.6"></script>
     <style>
       table, td, th{ border: 1px solid black; }
       .rot {-webkit-transform: rotate(-165deg);}
@@ -94,12 +94,12 @@
   </head>
   <body onload="loadPresets()" onresize="resizeSpiral()">
     <span id="customButtons">
-      <h3>Hyflash hypno program v1.2.5</h3>
+      <h3>Hyflash hypno program v1.2.6</h3>
       <input type="button" value="test (female)" onclick='initializeFromForm_presets("test_female")'>
       <input type="button" value="test (male)" onclick='initializeFromForm_presets("test_male")'>
     </span>
     <form name="config" style="display:none;" onsubmit="return initializeFromForm()">
-      <h3>Hyflash hypno program v1.2.5</h3>
+      <h3>Hyflash hypno program v1.2.6</h3>
       <input type="reset">
       <input type="button" value="Export all options to a string" onclick="exportFormShow();">
       <input type="button" value="Import options from a string" onclick="importFormShow()">
@@ -134,14 +134,24 @@
         <legend>Program selection</legend>
         Enter a list of which programs you would like to see. The choices are:<br>
         <ul id="program_descriptions">
+		  <li>acceptpleasure = forced to obey hypnosis, emphasis on pleasure 
+		  <li>amnesia = forget hypnotic commands after receiving them 
 		  <li>candybimbo = bimbo transformation script
 		  <li>dollhouse = story time, turning you into a doll
+		  <li>forgetresistance = makes you forget how to even try to resist
 		  <li>mindpop_begin = begin mind popping mantra
 		  <li>mindpop_repeat = listen on repeat for mind popping mantra
+		  <li>neveragain = never again waste time. 9/14/2022
 		  <li>obedientbimbo = you turn into a dumb, obedient bimbo
+		  <li>obeyrelax = blank mind obedience induction
 		  <li>persuade = uses persuasion tactics of reciprocation, consistency, social proof, liking, authority, and scarcity, to convince you to trust the hypnosis more (random order)
+		  <li>planning = you like to make plans and stick to them
+		  <li>puppet = obey hypnosis, puppet imagery
+		  <li>puppetstrings = forced to obey commands that include the phrase "puppet strings" even outside of hypnosis
 		  <li>rollercoaster = forced to obey hypnosis, with commands appearing in a random order 
 		  <li>test = test some commands
+		  <li>wakeupslow = wake up with a little warning beforehand
+		  <li>wakeupunstuck = unstick any body parts that got stuck, then wake you up
         </ul>
         <textarea rows="4" cols="50" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="programs"></textarea>
         
@@ -174,6 +184,10 @@
         <legend>Sprinkles selection</legend>
         These commands will be sprinkled at random into other programs (except inductions).  The choices are:<br>
         <ul id="sprinkles_descriptions">
+		  <li>mean_sprinkles = slightly mean statements about your helplessness
+		  <li>persuade_sprinkles = persuasive commands about obedience
+		  <li>puppet_sprinkles = jerks your body around to test and demonstrate control
+		  <li>whisper_sprinkles = makes you whisper and smile to test and demonstrate control
         </ul>
         <textarea rows="4" cols="50" autocomplete="off" autocorrect="off" autocapitalization="off" spellcheck="false" name="sprinkles_list"></textarea><br>
         Insert sprinkles with this probability: <input type="number" name="sprinkleProb" value="0.2" step="0.1" min="0" max="1"><br>
