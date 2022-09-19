@@ -1288,12 +1288,18 @@ function getDisplaySnippet(progSnippet){
     return displaySnippet;
 }
 
+var audioReady = function(){
+    return true;
+};
+
 function doProgression(){
     // now do progression
     if (progTime < new Date().getTime()){
         if (speak && window.isSpeaking && window.isSpeaking())
             return;
         if (progIndex >= progression.length)
+            return;
+        if (!audioReady())
             return;
         let progSnippet = progression[progIndex];
         while (inArray(avoidCommands,stripSpaces(progSnippet))){
@@ -1357,6 +1363,9 @@ function doProgression(){
                         }
                     }
                 });
+                audioReady = function(){
+                    return myAudio.ended;
+                };
                 //myAudio.play;
             }
             //if (progSnippet == "")
