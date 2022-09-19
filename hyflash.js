@@ -1297,8 +1297,10 @@ function doProgression(){
     if (progTime < new Date().getTime()){
         if (speak && window.isSpeaking && window.isSpeaking())
             return;
-        if (progIndex >= progression.length)
+        if (progIndex >= progression.length){
+            location.reload();
             return;
+        }
         if (!audioReady())
             return;
         let progSnippet = progression[progIndex];
