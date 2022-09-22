@@ -15,6 +15,8 @@ var triggerinduction_female="{\"presets\":\"custom_presets\",\"textdump\":false,
 var triggerinduction_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"induction1 triggerprog\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":false,\"spiral14.gif\":false,\"spiral15.gif\":true,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"coconut dreams\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 var puppet_female="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"puppet puppetstrings rollercoaster forgetresistance acceptpleasure amnesia wakeupunstuck\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":true,\"numProgs\":\"5\",\"triggerprog\":false,\"sprinkles_list\":\"whisper_sprinkles puppet_sprinkles persuade_sprinkles mean_sprinkles\",\"sprinkleProb\":\"0.6\",\"voice\":\"irish_woman\",\"chorus\":false,\"Spiral.gif\":true,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":true,\"spiral12.gif\":true,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":true,\"spiral13.gif\":false,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":true,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"encourage\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.15\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"coconut dreams\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 var puppet_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"1\",\"show_center_text\":true,\"programs\":\"puppet puppetstrings rollercoaster forgetresistance acceptpleasure amnesia wakeupunstuck\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":true,\"numProgs\":\"5\",\"triggerprog\":false,\"sprinkles_list\":\"whisper_sprinkles puppet_sprinkles persuade_sprinkles mean_sprinkles\",\"sprinkleProb\":\"0.6\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":true,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":true,\"spiral12.gif\":true,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":true,\"spiral13.gif\":false,\"spiral14.gif\":false,\"spiral15.gif\":false,\"spiral16.gif\":true,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"encourage\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.15\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"coconut dreams\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
+var rentaslut_intro_female="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"0.7\",\"show_center_text\":true,\"programs\":\"rentaslut_intro rentaslut_pinkgas rentaslut_outofbody rentaslut_wakeup\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"irish_woman\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"irish_woman\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":false,\"spiral14.gif\":false,\"spiral15.gif\":true,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"coconut dreams\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
+var rentaslut_intro_male="{\"presets\":\"custom_presets\",\"textdump\":false,\"spreed\":false,\"speedup\":\"0.8\",\"show_center_text\":true,\"programs\":\"rentaslut_intro rentaslut_pinkgas rentaslut_outofbody rentaslut_wakeup\",\"speak_bck\":false,\"bckGain\":\"0.4\",\"voice_bck\":\"sleepy_man\",\"programs_bck\":\"\",\"alt_programs\":\"nicer\",\"wake\":false,\"randomize\":false,\"numProgs\":\"100\",\"triggerprog\":false,\"sprinkles_list\":\"\",\"sprinkleProb\":\"0\",\"voice\":\"sleepy_man\",\"chorus\":false,\"Spiral.gif\":false,\"spiral7_horizontal.gif\":false,\"spiral8.gif\":false,\"spiral10.gif\":false,\"spiral11.gif\":false,\"spiral12.gif\":false,\"spiral17.gif\":false,\"spiral18.gif\":false,\"spiral19.gif\":false,\"spiral20.gif\":false,\"spiral21.gif\":false,\"spiral9.gif\":false,\"spiral13.gif\":false,\"spiral14.gif\":false,\"spiral15.gif\":true,\"spiral16.gif\":false,\"only_spiral\":false,\"badcommands\":\"\",\"backgroundSuggestions\":\"none\",\"flashrate\":\"200\",\"binaurals\":true,\"binGain\":\"0.05\",\"binLeft\":\"200\",\"binRight\":\"205\",\"trigger\":\"coconut dreams\",\"triggerText\":\"\",\"randExtras\":\"randExtras\"}";
 // HOWTO: I have added comments containing the text "HINT."  These comments are
 // meant to allow someone with minimal programming skill to edit the file so
 // that it shows the commands they want.  Do a text search in this file for "HINT"
@@ -270,7 +272,17 @@ var trigger = "coconut dreams";
 
 /*var refs;
 
-var sprinkles_refs;*/
+  var sprinkles_refs;*/
+
+function getNextProgram(programs, programNames, randomizePrograms, currentProgIndex){
+    if (currentProgIndex == -1){
+        
+    }
+}
+
+function getNextCentralLine(programs, programNames, randomizePrograms, sprinkles, currentProgIndex, currentProgram, currentIndex){
+    
+}
 
 function preparePrograms(progression, programs, programNames, randomizePrograms, sprinkles){
     let programs_tmp = [];
@@ -1297,12 +1309,12 @@ function doProgression(){
     if (progTime < new Date().getTime()){
         if (speak && window.isSpeaking && window.isSpeaking())
             return;
+        if (!audioReady())
+            return;
         if (progIndex >= progression.length){
             location.reload();
             return;
         }
-        if (!audioReady())
-            return;
         let progSnippet = progression[progIndex];
         while (inArray(avoidCommands,stripSpaces(progSnippet))){
             progIndex++;
@@ -1351,7 +1363,7 @@ function doProgression(){
                 myAudio.play()
                 myAudio.addEventListener('loadeddata', () => {
                     progTime = myAudio.duration*1000.0/speedup + new Date().getTime();
-                    myAudio.playbackRate = speedup;
+                    //myAudio.playbackRate = speedup;
                     if (chorus){
                         for (let i=0; i < chorusvoices.length; i++){
                             if (chorusvoices[i] == voice)
